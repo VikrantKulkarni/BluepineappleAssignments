@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Message Box</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+   <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.min.css">
+   <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+</head>
+<body>
+
+<h2>Message Box in JQuery</h2>
+<div id="firstdiv" class="mydiv">
+      <h3>Hello Welcome to Bluepineapple Family !</h3>
+      <br>
+      <button id="btn1">Click to show the message</button>
+</div>
+
+<br>
+
+<div id="messagebox" title="MessageBox" class="mydiv">
+
+    <h3>Bajaj Group</h3>
+    <img src="img.png" width="500px">
+    <br>
+
+</div>
+
+
+</body>
+
+
+<script src="js/jquery.js" type="text/javascript"></script>          
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+
+
+    <script>
+
+            $("#btn1").click(function(){
+
+                    //alert("Button Clicked");
+                    $("#messagebox").dialog({
+                        title:"Terms & Conditions of Bajaj Group",
+                        width:600,
+                        modal:true,
+
+
+                        buttons:[
+                            {
+                                text:"Close",
+                                icon:"ui-icon-heart",
+                                click:function(){
+                                    $(this).dialog("close");
+                                }
+                            },
+
+                            {
+                                text:"Accept",
+                                icon:"ui-icon-heart",
+                                click:function(){
+                                    alert("Hello ! Thank You for Accepting T&C");
+                                }
+                            }
+
+
+                        ]
+                        
+                    });
+
+            })
+
+
+    </script>
+
+
+
+</html>

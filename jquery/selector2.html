@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Selectors JQuery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<h2 class="myhead">Selectors</h2>
+
+    <div id="first" class="mydiv">
+        <p>This is first para in first div</p>
+        <p>This is second para in first div</p>
+
+    </div>
+
+    <div id="second" class="mydiv">
+        <p>This is third para in second div</p>
+    </div>
+
+    <div id="third" class="mydiv" >
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+    </div>
+
+  <button id="btn" type="button" onclick="func()">Click Me</button>
+
+
+</body>
+
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+<script>
+      
+  function func(){
+                
+               // $("#head").fadeToggle();        //$(#head) :- accessing ID's
+                $("#first,p").fadeToggle(500);
+                                                //$(".abc") :- accessing abc class
+                                                //$("h2") eqvivalent :- document.getElementByID("h2");
+
+
+  }
+
+
+
+  </script>
+
+
+
+
+</html>

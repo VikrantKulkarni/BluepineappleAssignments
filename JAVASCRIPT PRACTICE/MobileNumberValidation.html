@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mobile Number Validation</title>
+
+    <script type="text/javascript">
+    
+
+            function validate(){
+                var text= document.getElementById("mobile").value;
+
+                var regx = /[0-9]{10}$/;
+
+
+                // \d-match any digit
+                // \w- match any word char(a-z,A-Z,0-9 &-_)
+                // \s- match whitespace char (eg. Spaces and Tabs)
+                // \t- match a tab only
+
+                if(regx.test(text)){
+                        document.getElementById("lbl").innerHTML="Valid Mobile Number";
+                        document.getElementById("lbl").style.color="green";
+                        document.getElementById("lbl").style.visibility="visible";
+                        
+                }
+
+                else{
+                    document.getElementById("lbl").innerHTML="INVALID MOBILE NUMBER";
+                        document.getElementById("lbl").style.color="red";
+                        document.getElementById("lbl").style.visibility="visible";
+
+                }
+
+            }
+
+    
+    </script>
+
+</head>
+<body>
+
+    <input id="mobile" type="text" placeholder="Mobile Number"/><br>
+    <label id="lbl" style="color: red; visibility: hidden;">Invalid Username</label><br>
+
+    <button type="button" onclick="validate()">Submit</button>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "bluepineapple",
+  "version": "1.0.0",
+  "description": "a littile to do app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VikrantKulkarni/bluepineappleAssignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VikrantKulkarni/bluepineappleAssignment/issues"
+  },
+  "homepage": "https://github.com/VikrantKulkarni/bluepineappleAssignment#readme"
+}

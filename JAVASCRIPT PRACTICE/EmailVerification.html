@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Verify</title>
+ 
+    <script type="text/javascript">
+
+
+            function validate(){
+
+                    var text= document.getElementById("email").value;
+                    var regx=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]{2,8})?$/;
+
+
+                // \d-match any digit
+                // \w- match any word char(a-z,A-Z,0-9 &-_)
+                // \s- match whitespace char (eg. Spaces and Tabs)
+                // \t- match a tab only
+
+                //   ^$ - String
+                //   a.b        starts with a ends with b and in middle can be anything              
+
+
+                    if(regx.test(text)){
+                             document.getElementById("lbl").innerHTML="Valid Email ID";
+                             document.getElementById("lbl").style.color="green";
+                             document.getElementById("lbl").style.visibility="visible";
+                    }
+
+                    else{
+                            document.getElementById("lbl").innerHTML="Invalid Email ID";
+                            document.getElementById("lbl").style.color="red";
+                            document.getElementById("lbl").style.visibility="visible";
+                    }
+
+
+            }
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+    <input id="email" type="text" placeholder="Enter you email id here">
+    <br>
+    <label id="lbl" style="color:red; visibility: hidden;">Invalid Username</label>
+    <br>
+    <button id="btn" type="button" onclick="validate()">Validate</button>
+
+
+    
+</body>
+</html>
